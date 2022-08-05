@@ -11,3 +11,16 @@ numbers = [1,2,3,4,5,6]
 #ブロックの戻り値が真になった要素のみ集められる(今回は偶数のみ)
 even_numbers = numbers.select { |n| n.even? }
 p even_numbers
+
+#-----------------------------------#
+#findメソッド
+numbers = [1,2,3,4,5,6]
+#ブロックの戻り値が最初に真になった要素を返す
+odd_numbers = numbers.find { |n| n.odd? }
+p odd_numbers
+
+#-----------------------------------#
+#sumメソッド
+numbers = [1,2,3,4]
+#各要素を２倍しながら合計する
+p numbers.sum { |n| n * 2 }
